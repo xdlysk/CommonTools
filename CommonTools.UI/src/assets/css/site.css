@@ -10,3 +10,8 @@ body {
     padding-right: 15px;
     margin-top:5px;
 }
+
+.router-link-active{
+    color:white;
+    font-weight: bold;
+}

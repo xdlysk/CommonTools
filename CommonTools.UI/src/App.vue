@@ -15,6 +15,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="http://www.xdlysk.com">博客</a></li>
                     <li><router-link to="/encryption">加解密</router-link></li>
+                    <li><router-link to="/language">语言</router-link></li>
                     <li><router-link to="/about">About</router-link></li>
                 </ul>
             </div>

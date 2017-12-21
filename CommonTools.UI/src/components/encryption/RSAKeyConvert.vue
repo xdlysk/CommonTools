@@ -1,7 +1,11 @@
 <template>
-  <div class="container">
-   <div class="row">
-      <div class="col-md-5">
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h3 class="panel-title">RSA公钥私钥.NET与JAVA互转</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-5">
           <textarea class="form-control" rows="8" v-model="origin"></textarea>
       </div>
       <div class="col-md-2">
@@ -15,10 +19,11 @@
       <div class="col-md-5">
           <textarea class="form-control" rows="8" v-model="aftercalc"></textarea>
       </div>      
-   </div>
-   <div class="row">
-       <button type="button" class="btn btn-warning" v-on:click="clearContent">清空</button>
-   </div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-warning" v-on:click="clearContent">清空</button>
+        </div>
+    </div>
 </div>
 </template>
 <script>

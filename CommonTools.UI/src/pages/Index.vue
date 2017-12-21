@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-12">
         <h2>搜索引擎</h2>
         <div class="input-group">
             <input type="text" class="form-control" v-model="searchKey" aria-label="..." placeholder="输入关键字并选择对应的搜索引擎">
