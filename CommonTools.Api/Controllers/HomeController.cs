@@ -39,5 +39,11 @@ namespace CommonTools.Api.Controllers
         public void Delete(int id)
         {
         }
+
+        [HttpGet("rsaprivatekeyjava2dotnet/{privateKey}")]
+        public string RSAPrivateKeyJava2DotNet(string privateKey)
+        {
+            return Encryption.RSAKeyConvert.RSAPrivateKeyJava2DotNet(privateKey);
+        }
     }
 }

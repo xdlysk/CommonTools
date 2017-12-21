@@ -1,23 +1,33 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+<div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <router-link class="navbar-brand" to="/">工具箱</router-link>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://www.xdlysk.com">博客</a></li>
+                    <li><router-link to="/encryption">加解密</router-link></li>
+                    <li><router-link to="/about">About</router-link></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div class="container body-content">
+      <router-view/>
   </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'app'
-}
+  name: "app"
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

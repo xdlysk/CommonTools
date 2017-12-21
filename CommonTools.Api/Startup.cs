@@ -37,7 +37,14 @@ namespace CommonTools.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(cpb =>
+            {
+                cpb.AllowAnyHeader();
+                cpb.AllowAnyMethod();
+                cpb.AllowAnyOrigin();
+            });
+            app.UseDefaultFiles("");
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
