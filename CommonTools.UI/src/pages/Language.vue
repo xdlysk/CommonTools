@@ -3,7 +3,12 @@
       <ul class="nav nav-tabs">
             <li class="active">
                 <a href="#js" data-toggle="tab">
-                    JS处理
+                    JavaScript
+                </a>
+            </li>
+            <li>
+                <a href="#html" data-toggle="tab">
+                    HTML
                 </a>
             </li>
             <li>
@@ -14,7 +19,10 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade in active" id="js">
-                <defaultlang></defaultlang>
+                <langjs></langjs>
+            </div>
+            <div class="tab-pane fade in" id="html">
+                <langhtml></langhtml>
             </div>
             <div class="tab-pane fade in" id="other">
             </div>
@@ -23,12 +31,13 @@
   </div>
 </template>
 <script>
-import DefaultLang from '@/components/language/DefaultLang';
-
+import LangJs from '@/components/language/LangJs';
+import LangHtml from '@/components/language/LangHtml';
 export default {
   name:'language',
   components:{
-      defaultlang:DefaultLang
+      langjs:LangJs,
+      langhtml:LangHtml
   }
 }
 </script>

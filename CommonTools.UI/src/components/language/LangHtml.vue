@@ -2,39 +2,34 @@
 <div>
 <codemirror v-model="code" :options="cmOptions"></codemirror>
 
-  <button class="btn btn-default" v-on:click="formatter">格式化</button>
-
+  <button class="btn btn-primary" v-on:click="formatter">格式化</button>
 </div>
   
 </template>
 <script>
-// require component
 import { codemirror } from 'vue-codemirror'
- 
-// require styles
 import 'codemirror/lib/codemirror.css'
 
 import beautify from 'js-beautify';
 
 export default {
-  name:'default-lang',
+  name:'langhtml',
   data(){
     return {
-        code: 'const a = 10',
+        code: '<html></html>',
         cmOptions: {
             // codemirror options
             tabSize: 4,
-            mode: 'text/javascript',
-            theme: 'base16-dark',
+            mode: 'html',
+            theme: "base16-dark",
             lineNumbers: true,
-            line: true,
-            // more codemirror options, 更多 codemirror 的高级配置...
+            line: true
         }
         }
   },
   methods:{
       formatter(){
-          this.code = beautify(this.code,{indent_size:2});
+          this.code = beautify.html(this.code,{indent_size:2});
       }
   },
   components:{
