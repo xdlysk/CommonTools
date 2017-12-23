@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/pages/Index'
 import Encryption from '@/pages/Encryption'
 import Language from '@/pages/Language'
+import Codec from '@/pages/Codec'
 import About from '@/pages/About'
 
 Vue.use(Router)
@@ -21,6 +22,10 @@ export default new Router({
       path:'/language',
       name:'Language',
       component:Language
+    },{
+      path:'/codec',
+      name:'Codec',
+      component:Codec
     },{
       path:'/about',
       name:'About',
