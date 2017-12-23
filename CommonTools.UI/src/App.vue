@@ -17,6 +17,7 @@
                     <li><router-link to="/encryption">加解密</router-link></li>
                     <li><router-link to="/language">语言</router-link></li>
                     <li><router-link to="/codec">编解码</router-link></li>
+                    <li><router-link to="/hash">散列/哈希</router-link></li>
                     <li><router-link to="/about">About</router-link></li>
                 </ul>
             </div>

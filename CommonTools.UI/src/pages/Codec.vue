@@ -11,6 +11,11 @@
                     Base64图片转换
                 </a>
             </li>
+            <li>
+                <a href="#uriencode" data-toggle="tab">
+                    URIEncode
+                </a>
+            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade in active" id="base64">
@@ -19,6 +24,9 @@
             <div class="tab-pane fade in" id="base64image">
                 <base64image></base64image>
             </div>
+            <div class="tab-pane fade in" id="uriencode">
+                <uricodec></uricodec>
+            </div>
         </div>
       
   </div>
@@ -26,12 +34,14 @@
 <script>
 import Base64Image from "@/components/codec/Base64Image";
 import Base64FromTo from "@/components/codec/Base64FromTo";
+import URICodec from "@/components/codec/URICodec";
 
 export default {
   name: "codec",
   components: {
     base64image: Base64Image,
-    base64fromto:Base64FromTo
+    base64fromto:Base64FromTo,
+    uricodec:URICodec
   }
 };
 </script>
