@@ -25,38 +25,40 @@
   </div>
 </template>
 <script>
-import LinkGroup from '@/components/LinkGroup';
-import StaticData from '@/assets/js/staticdata';
+import LinkGroup from "@/components/LinkGroup";
+import StaticData from "@/assets/js/staticdata";
 
 export default {
-  name:'index',
-  components:{
-      linkgroup:LinkGroup,
-      StaticData
+  name: "index",
+  components: {
+    linkgroup: LinkGroup,
+    StaticData
   },
-  data(){
-      return {
-          currentSearchEngine:'google',
-          searchKey:'',
-          staticData:StaticData
-      }
+  data() {
+    return {
+      currentSearchEngine: "google",
+      searchKey: "",
+      staticData: StaticData
+    };
   },
-  methods:{
-      search(){
-          var type = this.currentSearchEngine;
-          if(type==='google'){
-              window.open(`https://www.google.com/search?q=${encodeURI(this.searchKey)}`);
-          }
-          else if(type==='baidu'){
-              window.open(`https://www.baidu.com/s?wd=${encodeURI(this.searchKey)}`);
-          }
-          else if(type ==='bing'){
-              window.open(`https://cn.bing.com/search?q=${encodeURI(this.searchKey)}`);
-          }
-      },
-      changeSearch(type){
-          this.currentSearchEngine = type;
+  methods: {
+    search() {
+      var type = this.currentSearchEngine;
+      if (type === "google") {
+        window.open(
+          `https://www.google.com/search?q=${encodeURI(this.searchKey)}`
+        );
+      } else if (type === "baidu") {
+        window.open(`https://www.baidu.com/s?wd=${encodeURI(this.searchKey)}`);
+      } else if (type === "bing") {
+        window.open(
+          `https://cn.bing.com/search?q=${encodeURI(this.searchKey)}`
+        );
       }
+    },
+    changeSearch(type) {
+      this.currentSearchEngine = type;
+    }
   }
-}
+};
 </script>
