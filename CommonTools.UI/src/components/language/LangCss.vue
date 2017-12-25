@@ -11,11 +11,9 @@ import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 
   // language
-  import 'codemirror/mode/xml/xml.js'
+  import 'codemirror/mode/css/css.js'
   // require active-line.js
   import'codemirror/addon/selection/active-line.js'
-  // autoCloseTags
-  import'codemirror/addon/edit/closetag.js'
 
 import beautify from 'js-beautify';
 
@@ -28,15 +26,14 @@ export default {
           tabSize: 4,
           styleActiveLine: true,
           lineNumbers: true,
-          autoCloseTags: true,
           line: true,
-          mode: 'text/html',
+          mode: 'text/css'
         }
         }
   },
   methods:{
       formatter(){
-          this.code = beautify.html(this.code,{indent_size:2});
+          this.code = beautify.css(this.code,{indent_size:2});
       }
   },
   components:{

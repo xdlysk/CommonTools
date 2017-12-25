@@ -14,7 +14,6 @@
     "jquery": "^3.2.1",
     "js-base64": "^2.4.0",
     "js-beautify": "^1.7.5",
-    "jssha": "^2.3.1",
     "uglifyjs-browser": "^1.0.0",
     "vue": "^2.5.2",
     "vue-codemirror": "^4.0.2",

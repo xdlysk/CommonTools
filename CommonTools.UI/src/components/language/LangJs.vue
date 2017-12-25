@@ -13,6 +13,12 @@
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
 
+  // language
+  import 'codemirror/mode/javascript/javascript.js'
+  // theme css
+  // require active-line.js
+  import'codemirror/addon/selection/active-line.js'
+
 import beautify from 'js-beautify';
 import uglifyjs from 'uglifyjs-browser';
 
@@ -20,14 +26,14 @@ export default {
   name:'langjs',
   data(){
     return {
-        code: 'var i =10;',
+        code: 'var i=10;',
         cmOptions: {
-            // codemirror options
-            tabSize: 4,
-            mode: 'javascript',
-            theme: "base16-dark",
-            lineNumbers: true,
-            line: true
+        tabSize: 4,
+        styleActiveLine: true,
+        lineNumbers: true,
+        line: true,
+        mode: 'text/javascript',
+        lineWrapping: true,
         }
         }
   },

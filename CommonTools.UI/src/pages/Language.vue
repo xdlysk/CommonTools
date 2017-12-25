@@ -12,8 +12,8 @@
                 </a>
             </li>
             <li>
-                <a href="#other" data-toggle="tab">
-                    其他
+                <a href="#css" data-toggle="tab">
+                    CSS
                 </a>
             </li>
         </ul>
@@ -24,7 +24,8 @@
             <div class="tab-pane fade in" id="html">
                 <langhtml></langhtml>
             </div>
-            <div class="tab-pane fade in" id="other">
+            <div class="tab-pane fade in" id="css">
+                <langcss></langcss>
             </div>
         </div>
       
@@ -33,11 +34,13 @@
 <script>
 import LangJs from '@/components/language/LangJs';
 import LangHtml from '@/components/language/LangHtml';
+import LangCss from '@/components/language/LangCss';
 export default {
   name:'language',
   components:{
       langjs:LangJs,
-      langhtml:LangHtml
+      langhtml:LangHtml,
+      langcss:LangCss
   }
 }
 </script>
