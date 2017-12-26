@@ -19,6 +19,15 @@
                     <li><router-link to="/codec">编解码</router-link></li>
                     <li><router-link to="/hash">散列/哈希</router-link></li>
                     <li><router-link to="/about">About</router-link></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">第三方登录<b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a v-bind:href="baidu">百度</a></li>
+                          <li><a href="#">QQ号</a></li>
+                          <li><a href="#">微信</a></li>
+                      </ul>
+                  </li>
                 </ul>
             </div>
         </div>
@@ -31,6 +40,11 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  data(){
+    return {
+      baidu:`http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=yL0BwYv21ghRBf1KDfYycIai&redirect_uri=${encodeURIComponent('http://www.xdlysk.com/tools/openaccount?type=baidu&redirect=http://www.xdlysk.com/tools/')}&scope=basic&display=popup`
+    }
+  }
 };
 </script>
